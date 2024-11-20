@@ -49,14 +49,33 @@
     }
 }
 
-.about-section .image-wrapper {
+.about-section  {
     z-index: 2;
     img {
         width: 150px;
         border-radius: 50%;
     }
 }
+.image-wrapper {
+  display: flex; /* Centra la imagen dentro de su contenedor */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Espacio entre la imagen y el contenido */
+}
 
+.image-wrapper img {
+  width: 250px; /* Ajusta el tamaño de la imagen */
+  height: 250px; /* Hace que la imagen sea cuadrada */
+  object-fit: cover; /* Asegura que la imagen ocupe todo el espacio sin deformarse */
+  border-radius: 50%; /* Hace la imagen redonda */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave */
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.05); /* Aumenta el tamaño un poco al hacer hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Incrementa la sombra al hacer hover */
+}
 .about p {
     text-align: center;
     padding-top: 30%;
